@@ -7,19 +7,17 @@ export default function Restaurantss() {
 
 
   const [restaurants, setRestaurants] = useState([]);
-  //const [menus, setMenus] =useState([]);
-
-// eslint-disable-next-line
-  useEffect(async () => {
-    const allrestaurants = await fetch('http://localhost:5000/restaurant').then((res) =>
+  
+  useEffect( () => {
+    async function rest() {
+    const allrestaurants = await fetch('http://localhost:5000/restaurant')
+    .then((res) =>
       res.json()
     )
-
-    console.log(allrestaurants)
-    setRestaurants(allrestaurants)
+    setRestaurants(allrestaurants) }
+    rest()
   }, []);
 
-  
   // useEffect(async(idRestaurant) => {
   //   const oneMenu = await fetch(`http://localhost:5000/menuitem/${idRestaurant}`).then((res)=>
   //   res.json()

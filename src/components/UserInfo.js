@@ -13,25 +13,27 @@ export default function UserInfo(props) {
     var decoded = jwt_decode(userJwt)
   }
     
-  // eslint-disable-next-line
-  useEffect(async () => {
-    const user = await fetch(`http://localhost:5000/userinfo/${decoded.idUser}`).then((res) =>
+
+  useEffect( () => {
+    async function useri() {
+    const user = await fetch(`http://localhost:5000/userinfo/${decoded.idUser}`)
+    .then((res) =>
       res.json()
     )
-    setUserInfo(user)
-    console.log(user)
-// eslint-disable-next-line
-  }, []);
-// eslint-disable-next-line
-  useEffect(async () => {
+    setUserInfo(user) }
+    useri()
+
+  }, [decoded.idUser]);
+
+  useEffect( () => {
+    async function order() {
     const orders = await fetch(`http://localhost:5000/orders/${decoded.idUser}`).then((res) =>
       res.json()
     )
-    console.log(orders)
-    setHistory(orders)
-    // eslint-disable-next-line
-  }, []);
-  
+    setHistory(orders) }
+      order()
+  }, [decoded.idUser]);
+   
   if (userJwt == null){
     return (
         <div><h2>Ole hyvä ja kirjaudu ensin sisään.</h2></div>

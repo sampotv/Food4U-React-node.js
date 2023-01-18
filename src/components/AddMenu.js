@@ -50,27 +50,27 @@ function AddMenu() {
 
     }
   };
-  // eslint-disable-next-line
-  useEffect(async () => {
+ 
+
+  useEffect( () => {
+    async function rest() {
     const restaurant = await fetch(`http://localhost:5000/restaurant/${restaurantId}/restaurant`).then((res) =>
       res.json()
     )
+    setRestaurants(restaurant) }
+      rest()
+  }, [restaurantId]);
+  
 
-    console.log(restaurant)
-    setRestaurants(restaurant)
-    // eslint-disable-next-line
-  }, []);
-  // eslint-disable-next-line
-  useEffect(async() => {
-    const restaurantMenu = await fetch(`http://localhost:5000/restaurant/${restaurantId}/menu`).then((res)=>
+  useEffect( () => {
+    async function menu() {
+    const restaurantMenu = await fetch(`http://localhost:5000/restaurant/${restaurantId}/menu`)
+    .then((res)=>
     res.json()
-
     )
-
-    console.log(restaurantMenu)
-    setMenus(restaurantMenu)
-    // eslint-disable-next-line
-  }, []);
+    setMenus(restaurantMenu) }
+    menu()
+  }, [restaurantId]);
 
 
   return (

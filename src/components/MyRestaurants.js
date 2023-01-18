@@ -10,18 +10,18 @@ export default function MyRestaurants(props) {
     var decoded = jwt_decode(userJwt);
 }
     const [restaurants, setRestaurants] = useState([]);
-  // eslint-disable-next-line
-  useEffect(async () => {
-    
-    const allrestaurants = await fetch(`http://localhost:5000/myrestaurants/${decoded.idUser}`)
+
+  useEffect( () => {
+    async function rest() {
+    const allrestaurants = await  fetch(`http://localhost:5000/myrestaurants/${decoded.idUser}`)
     .then((res) =>
       res.json()
     )
 
     console.log(allrestaurants)
-    setRestaurants(allrestaurants)
-    // eslint-disable-next-line
-  },[]);
+    setRestaurants(allrestaurants)}
+rest()
+  },[decoded.idUser]);
 
 if (userJwt == null){
     return (

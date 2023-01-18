@@ -22,18 +22,21 @@ export default function GetMenu (props) {
 }
 
     
-// eslint-disable-next-line
-    useEffect(async () => {
-      const restaurant = await fetch(`http://localhost:5000/restaurant/${restaurantId}/restaurant`).then((res) =>
+
+    useEffect( () => {
+      async function rest() {
+      const restaurant = await fetch(`http://localhost:5000/restaurant/${restaurantId}/restaurant`)
+      .then((res) =>
         res.json()
       )
-      
-      console.log(restaurant)
-      console.log(userJwt)
-      setRestaurants(restaurant)
-      // eslint-disable-next-line
-    }, []);
+
+      setRestaurants(restaurant) }
+      rest()
+     
+    }, [restaurantId]);
   
+
+
     const addOrder = () => {
      Axios.post(`http://localhost:5000/order/:idUser`, {
          amount: cartItems.length,        
@@ -48,17 +51,18 @@ export default function GetMenu (props) {
       
    console.log(restaurantId);
 
-    // eslint-disable-next-line
-  useEffect(async() => {
+ 
+  useEffect(() => {
+    async function menu() {
     const restaurantMenu = await fetch(`http://localhost:5000/restaurant/${restaurantId}/menu`).then((res)=>
     res.json()
 
     )
 
-    console.log(restaurantMenu)
-    setMenus(restaurantMenu)
-    // eslint-disable-next-line
-  }, []);
+    setMenus(restaurantMenu) }
+    menu()
+    
+  }, [restaurantId]);
     
   
 
