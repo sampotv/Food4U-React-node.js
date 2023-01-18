@@ -1,0 +1,111 @@
+-- MySQL Workbench Forward Engineering
+
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema food4u
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema food4u
+-- -----------------------------------------------------
+CREATE user IF NOT EXISTS 'fooduser'@'localhost' IDENTIFIED BY 'foodpass';
+GRANT ALL PRIVILEGES ON * . * TO 'fooduser'@'localhost';
+FLUSH PRIVILEGES;
+CREATE SCHEMA IF NOT EXISTS `food4u` DEFAULT CHARACTER SET utf8 ;
+USE `food4u` ;
+
+-- -----------------------------------------------------
+-- Table `food4u`.`user`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `food4u`.`user` (
+  `idUser` INT NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(45) NOT NULL,
+  `password` VARCHAR(255) NOT NULL,
+  `fname` VARCHAR(45) NOT NULL,
+  `lname` VARCHAR(45) NOT NULL,
+  `address` VARCHAR(45) NOT NULL,
+  `isOwner` BOOLEAN NULL,
+  PRIMARY KEY (`idUser`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `food4u`.`restaurant`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `food4u`.`restaurant` (
+  `idRestaurant` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(45) NOT NULL,
+  `type` VARCHAR(45) NOT NULL,
+  `pricerange` VARCHAR(5) NOT NULL,
+  `address` VARCHAR(45) NOT NULL,
+  `openingHours` VARCHAR(45) NOT NULL,
+  `restaurantImg` VARCHAR(255) NULL,
+  `idUser` INT NULL,
+  PRIMARY KEY (`idRestaurant`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `food4u`.`menuitem`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `food4u`.`menuitem` (
+  `idMenuItem` INT NOT NULL AUTO_INCREMENT,
+  `dish` VARCHAR(255) NOT NULL,
+  `name` VARCHAR(45) NOT NULL,
+  `description` VARCHAR(255) NOT NULL,
+  `price` FLOAT NOT NULL,
+  `menuItemImg` VARCHAR(255) NULL,
+  `idRestaurant` INT NOT NULL,
+  PRIMARY KEY (`idMenuItem`),
+  INDEX `fk_Menu_Restaurant1_idx` (`idRestaurant` ASC) VISIBLE,
+  CONSTRAINT `fk_Menu_Restaurant1`
+    FOREIGN KEY (`idRestaurant`)
+    REFERENCES `food4u`.`restaurant` (`idRestaurant`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `food4u`.`ordercontent`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `food4u`.`orderContent` (
+  `idOrderContent` INT NOT NULL AUTO_INCREMENT,
+  `amount` INT NOT NULL,
+  `price` FLOAT NULL,
+  `address` VARCHAR(255) NOT NULL,
+  `idUser` INT NOT NULL,
+  `restaurant` VARCHAR(255) NOT NULL,
+  `orderTime` timestamp default current_timestamp,
+  PRIMARY KEY (`idOrderContent`))
+ 
+ENGINE = InnoDB;
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+insert into restaurant (name, type, pricerange, address, openingHours, restaurantImg) VALUES ('Pizzakunkku', 'Pizzeria', '€', 'Pizzakatu 666', '10-20', 'https://cdn.valio.fi/mediafiles/735b79c8-e8f8-4f46-ac22-770103a4facb/1000x752-recipe-hero/4x3/pizza.jpg');
+insert into restaurant (name, type, pricerange, address, openingHours, restaurantImg) VALUES ('Kebabkunkku', 'Kebab', '€', 'Kebabpolku 6', '10-20', 'https://mantangrilli.fi/wp-content/uploads/kebab-rulla-x800-600x600.png');
+insert into restaurant (name, type, pricerange, address, openingHours, restaurantImg) VALUES ('Chez Dominique', 'Fine Dining', '€€€€', 'Rikhardinkatu 5', '17-24', 'https://www.halton.com/wp-content/uploads/2020/05/Solution-Fine-dining-003.jpg');
+insert into restaurant (name, type, pricerange, address, openingHours, restaurantImg) VALUES ('Grilli Toro', 'Pihviravintola', '€€', 'Valjakkalanraitti 3', '11-24', 'https://www.kotikokki.net/media/cache/large/recipeimage/large/52d6dc5ed074a9ec0e077d1a/original.jpg?1297467421');
+insert into restaurant (name, type, pricerange, address, openingHours, restaurantImg) VALUES ('GoodWin Steak House', 'Pihviravintola', '€€€', 'Lihamestarinpolku 1', '11-24', 'https://www.steak.fi/411i500x367.jpg?key=44bfcf19da486e4e62ec4e7cec089bf8');
+<<<<<<< HEAD:food4u_database_v1.1.txt
+insert into menuitem (dish, name, description, price, menuItemImg, idRestaurant) VALUES ('alkuruoka', 'Valkosipulileipä', 'Valkosipulileipä', 5, 'https://www.kotikokki.net/media/cache/large/recipeimage/large/52d6dfa7d074a9ec0e0a6d52/original.jpg?1297724550', 1);
+insert into menuitem (dish, name, description, price, menuItemImg, idRestaurant) VALUES ('alkuruoka', 'Valkosipulileipä', 'Valkosipulileipä', 5, 'https://www.kotikokki.net/media/cache/large/recipeimage/large/52d6dfa7d074a9ec0e0a6d52/original.jpg?1297724550', 2);
+insert into menuitem (dish, name, description, price, menuItemImg, idRestaurant) VALUES ('Pääruoka', 'Pizza Margherita', 'Tomaattikastike, juusto', '7.0', 'https://www.yumcurry.com/wp-content/uploads/2020/06/pizza-margherita-recipe.jpg', '1');
+insert into menuitem (dish, name, description, price, menuItemImg, idRestaurant) VALUES ('Pääruoka', 'Kebab Ranskalaisilla', 'Kebab, ranskalaiset, salaatti', 10, 'https://sirinlounasravintola.fi/wp-content/uploads/2020/07/Lasten-kebab-rans.png', 2);
+insert into menuitem (dish, name, description, price, menuItemImg, idRestaurant) VALUES ('Jälkiruoka', 'Jäätelöannos', 'Suklaa, mansikka ja vaniljajäätelöä', 8, 'https://cdn.anna.fi/wp-content/uploads/s3/sites/40/2020/08/17073648/p2160447_0.jpg', 1);
+insert into user values('1','Riku','1234', 'Riku',' Savolainen',' Viistokuja 3, Murto', 'yes');
+insert into user values('2','D1b2n4','1234', 'Risto','Mämmi',' Ristitie 66, Kiikeli', 'No');
+=======
+insert into restaurant (name, type, pricerange, address, openingHours, restaurantImg) VALUES ('Niilos Cafe', 'Kahvila', '€€€€', 'Milloin missäkin tapahtumassa', '10-13', 'https://www.vastavalo.net/albums/userpics/10119/normal_varikastori.jpg');
+insert into menuitem (dish, name, description, price, menuItemImg, idRestaurant) VALUES ('Pääruoka', 'Valkosipulileipä', 'Valkosipulileipä', 5, 'https://www.kotikokki.net/media/cache/large/recipeimage/large/52d6dfa7d074a9ec0e0a6d52/original.jpg?1297724550', 1);
+insert into menuitem (dish, name, description, price, menuItemImg, idRestaurant) VALUES ('Naposteltavaa', 'Valkosipulileipä', 'Valkosipulileipä', 5, 'https://www.kotikokki.net/media/cache/large/recipeimage/large/52d6dfa7d074a9ec0e0a6d52/original.jpg?1297724550', 2);
+insert into menuitem (dish, name, description, price, menuItemImg, idRestaurant) VALUES ('Pääruoka', 'Pizza Margherita', 'Tomaattikastike, juusto', '7.0', 'https://www.yumcurry.com/wp-content/uploads/2020/06/pizza-margherita-recipe.jpg', '3');
+insert into menuitem (dish, name, description, price, menuItemImg, idRestaurant) VALUES ('Pääruoka', 'Kebab Ranskalaisilla', 'Kebab, ranskalaiset, salaatti', 10, 'https://sirinlounasravintola.fi/wp-content/uploads/2020/07/Lasten-kebab-rans.png', 4);
+insert into menuitem (dish, name, description, price, menuItemImg, idRestaurant) VALUES ('Jälkiruoka', 'Jäätelöannos', 'Suklaa, mansikka ja vaniljajäätelöä', 8, 'https://cdn.anna.fi/wp-content/uploads/s3/sites/40/2020/08/17073648/p2160447_0.jpg', 5);
+insert into menuitem (dish, name, description, price, menuItemImg, idRestaurant) VALUES ('Aamukahvi', 'Kahvi mustana', 'Tummapaahtoinen kahvi 3 dl', 2, 'https://www.haggman.fi/wp-content/uploads/2015/05/Kahvi.jpg', 6);
+>>>>>>> ravintola-sivun-backend-toiminnot:food4u_database_v1.0.txt

@@ -1,0 +1,498 @@
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: center;
+}
+
+.homeRestaurantSearch {
+  display: flex;
+  justify-content: center;
+}
+
+.searchBar {
+  /* margin-left: 41%; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 50px;
+  width: 400px;
+  font-size: 19px;
+  text-align: center;
+  border: solid 2px rgb(116, 0, 0);
+}
+
+.restaurantImg {
+  width: 150px;
+  height: 150px;
+  border: solid 2px rgb(116, 0, 0);
+}
+
+.menuItemImg {
+  width: 150px;
+  height: 150px;
+}
+
+.addMenuItemImg {
+  width: 50px;
+  height: 50px;
+}
+
+.line {
+  border-bottom: 4px solid rgb(190, 187, 187);
+}
+
+.addMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 20px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-bottom: 2px solid rgb(116, 0, 0);
+  padding-bottom: 1%;
+  padding-top: 1%;
+}
+
+.restaurantHome {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 40px;
+  border-bottom: 4px solid rgb(116, 0, 0);
+  padding-bottom: 1%;
+  padding-top: 1%;
+ 
+}
+
+.restaurantHomeText {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 75%;
+  margin-top: 3%;
+  
+}
+
+.restaurantHomeAddress {
+  font-size: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 20px;
+}
+
+
+.homeMenuButton {
+  height: 70px;
+  width: 150px;
+  font-size: 16px;
+  border: solid 2px rgb(116, 0, 0);
+  cursor: pointer;
+}
+
+.alignCenter {
+  text-align: center;
+}
+
+.loginInsertBox {
+  height: 40px;
+  width: 180px;
+  font-size: 16px;
+  padding-left: 10px;
+  margin-top: 1%;
+}
+
+.loginButton {
+  margin-top: 25px;
+  width: 197px;
+  height: 45px;
+  font-size: 20px;
+}
+.padding {
+  padding: 1%;
+}
+
+.padding5 {
+  padding: 5%;
+}
+
+.barBackground {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: stretch;
+  background-color: #e32934;
+  color: white;
+  height: 130px;
+  box-shadow: 0 4px 2px -2px gray
+}
+
+.barElements {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 10%;
+}
+
+.logo {
+  margin-right: auto;
+  font-family: cursive;
+  font-size: 70px;
+  margin-top: auto;
+  color: white;
+  margin-bottom: auto;
+  text-decoration-color: transparent;
+}
+
+.barButtons {
+  margin-right: 10%;
+  display: flex;
+  font-size: 20px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.barButtons .button {
+  padding: 30px;
+  color: #f0f0f0;
+}
+
+.barButtons .button:hover {
+  background-color: #d5242e;
+
+}
+
+.kirjBut {
+  font-size: 15px;
+  padding: 30px;
+  cursor: pointer;
+}
+
+.rekBut {
+  font-size: 15px;
+  padding: 15px 3px;
+  margin-left: 5%;
+  cursor: pointer;
+}
+
+.barButtons .cartItemCount {
+  background-color: #ffffff;
+  border-radius: 20px;
+  color: #e32934;
+  margin: 0px 0px 0px 10px;
+  font-size: 12px;
+  padding: 5px;
+}
+
+.barButtons a:link {
+  text-decoration: none;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.restaurantMainImg {
+  width: 960px;
+  height: 350px;
+  background-size: cover;
+  background-position: center;
+}
+
+.restaurantDetails {
+  width: 960px;
+  padding: 20px 0px;
+}
+
+.restaurantDetails .restaurantName {
+  color: #221F1F;
+}
+
+.restaurantDetails div i {
+  padding: 5px 10px;
+  color: #E32934;
+  /*color: #330202;*/
+}
+
+.restaurantMenuFunctions {
+  width: 960px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.menuSearch input {
+  height: 40px;
+  font-size: 19px;
+  text-align: center;
+  border: solid 2px rgb(116, 0, 0);
+}
+
+.menuListDishes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.restaurantMenuFunctions div {
+  padding: 5px 10px;
+}
+
+.restaurantMenuFunctions .menuSearch {
+  width: 30%;
+}
+
+.restaurantMenuDisplay {
+  width: 960px;
+}
+
+.menuDishItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px
+}
+
+.menuDishItems .information {
+  padding: 10px 0px;
+  color: #E32934;
+}
+
+.restaurantMenuDisplay {
+  width: 960px;
+}
+
+.menuDishItems .itemWrapper {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.menuDishItems .itemWrapper:hover {
+  background-color: #f8f8f8;
+}
+
+.dishItem {
+  display: flex;
+  /*width: 300px;*/
+}
+
+.dishImg {
+  padding: 5px;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: center;
+}
+
+.dishDetails {
+  padding: 10px 0px 0px 10px;
+  width: 200px;
+}
+
+.dishDetails p {
+  margin-top: 0px;
+}
+
+.addToCartIcon {
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  color: #d09326;
+  cursor: pointer;
+}
+
+.addToCartIcon:hover {
+  background-color: #04aa6d;
+}
+
+.addToCartIcon:active {
+  background-color: #04aa6d;
+  color: #ffffff;
+}
+
+.shoppingCartWrapper {
+  min-width: 400px;
+}
+
+.removeFromCartIcon {
+  padding: 15px 15px 0px 15px;
+  display: flex;
+  justify-content: center;
+  font-size: 15px;
+  color: #221f1f;
+}
+
+.removeFromCartIcon:hover {
+  background-color: #e50914;
+}
+
+.removeFromCartIcon:active {
+  background-color: #e50914;
+  color: #ffffff;
+}
+
+.startPayment button {
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.footerWrapper {
+  order: 0;
+  flex: 0 1 auto;
+  align-self: stretch;
+  margin-top: 100px;
+  padding-bottom: 40px;
+  background-color: #221f1f;
+  color: #f5f5f5;
+  font-size: 12px;
+  min-width: 1000px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.createBox {
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 19px;
+  text-align: center;
+}
+
+.addText {
+  display: flex;
+  flex-direction: row;
+  
+  width: 400px;
+  text-align: left;
+}
+
+.addBox {
+  margin-left: auto; 
+  margin-right: 0;
+  width: 200px;
+}
+
+.addBox2 {
+  margin-left: auto; 
+  margin-right: 0;
+  width: 208px;
+}
+.addBox3 {
+  margin-left: auto; 
+  margin-right: 0;
+  width: 150px;
+}
+.createRestaurantButton {
+  margin-top: 25px;
+  width: 150px;
+  height: 45px;
+  font-size: 15px;
+}
+.cart {
+  margin: auto;
+  width: 45%;
+  border: 3px solid rgb(0, 0, 0);
+  padding: 10px;
+  margin-top: 20px;
+
+
+}
+
+.cart h2 {
+  font-size: 25px;
+  text-align: center;
+}
+
+.cart-item-name {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 17px;
+  background-color: rgb(255, 233, 209);
+
+}
+
+.cart-item-price {
+  text-align: center;
+  margin-left: 20px;
+}
+
+.cart-price-name {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.cart-price-price {
+  text-align: center;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.removebtn {
+  margin-left: 25px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 17px;
+  border: none;
+  background-color: rgb(255, 233, 209);
+}
+
+.total {
+  font-size: 20px;
+  text-align: center;
+}
+
+.totalPrice {
+  font-size: 30px;
+  text-align: center;
+}
+
+.cartbtns {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  
+}
+
+.continuebtn {
+  display: inline-block;
+  font-size: 20px;
+  padding: 5px;
+  cursor: pointer;
+  width: 85px;
+  color: red;
+}
+
+.paybtn {
+  display: inline-block;
+  font-size: 20px;
+  padding: 5px;
+  cursor: pointer;
+  width: 85px;
+  color: green;
+}
+
+.cartAddress {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.endbtn {
+  font-size: 25px;
+  padding: 5px;
+  margin-top: 50px;
+  cursor: pointer;
+}
