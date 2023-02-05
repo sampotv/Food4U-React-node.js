@@ -1,4 +1,4 @@
-Sovellus pyörii osoitteessa https://master--food4u0.netlify.app/ voit tehdä uuden käyttäjän tai käytä esimerkkikäyttäjää 1234 passu 1234.
+Sovellus pyörii osoitteessa https://master--food4u0.netlify.app/ sovellus ei tällä hetkellä ole yhteydessä tietokantaan, etsitään uusi tietokantapalvelu, nyt pyörii vain localhostin tietokannan avulla.
 
 # Food4U - ruuantilauspalvelu
 Web-sovellusprojektissa oli tehtävänä tehdä ja suunnitella ruuantilaussovellus. Asiakas luo tilin, jonka kautta hän voi tilata erilaisia herkullisia aterioita paikallisista suosikkiravintoloistaan. Ravintoloitsija voi luoda ravintoloita ja niihin erilaisia ruokalistoja. Ruokatilauksista jää tiedot ravintoloitsijan ja asiakkaan tilaushistoriaan. Sovellus toteutettiin Reactilla ja Node.js:ää käyttäen.
