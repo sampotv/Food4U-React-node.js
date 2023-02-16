@@ -14,9 +14,9 @@ const bcrypt = require('bcryptjs');
 
 const dbConn = mysql.createPool({
   host:'localhost',
-	user:'fooduser',
-	password:'foodpass',
-	database:'food4u',
+	user:'bba4956b68b3c7',
+	password:'9e1c8e32',
+	database:'heroku_135dc8cd87aaef0',
   acquireTimeout: 1000,
   connectionLimit: 100
 });
