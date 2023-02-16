@@ -1,5 +1,7 @@
+Sovellus pyörii osoitteessa https://master--food4u0.netlify.app/ sovellus ei tällä hetkellä ole yhteydessä tietokantaan, etsitään uusi tietokantapalvelu, nyt pyörii vain localhostin tietokannan avulla.
+
 # Food4U - ruuantilauspalvelu
-Web-sovellusprojektissa oli tehtävänä tehdä ja suunnitella ruuantilaussovellus. Asiakas luo tilin, jonka kautta hän voi tilata erilaisia herkullisia aterioita paikallisista suosikkiravintoloistaan. Ravintoloitsija voi luoda ravintoloita ja niihin erilaisia ruokalistoja. Ruokatilauksista jää tiedot ravintoloitsijan ja asiakkaan tilaushistoriaan. Sovellus toteutettiin Reactilla ja Node.js:ää käyttäen. Valmis sovellus toimii Heroku-palvelussa. 
+Web-sovellusprojektissa oli tehtävänä tehdä ja suunnitella ruuantilaussovellus. Asiakas luo tilin, jonka kautta hän voi tilata erilaisia herkullisia aterioita paikallisista suosikkiravintoloistaan. Ravintoloitsija voi luoda ravintoloita ja niihin erilaisia ruokalistoja. Ruokatilauksista jää tiedot ravintoloitsijan ja asiakkaan tilaushistoriaan. Sovellus toteutettiin Reactilla ja Node.js:ää käyttäen.
 
 ## Tekijät
 Ryhmä 4 Food4U-sovelluksen tekivät Antti Roos, Sampo Vuorento, Juha-Matti Litendahl ja Janne Ahonen. Kukin ryhmän jäsen toteutti sovelluksen osan fullstack-ohjelmoijina. Kaikki ohjelmoivat sovelluksen osan toimimaan frontend- ja backend-puolella. 
