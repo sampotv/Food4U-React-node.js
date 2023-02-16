@@ -56,12 +56,9 @@ export default function GetMenu (props) {
     async function menu() {
     const restaurantMenu = await fetch(`http://localhost:5000/restaurant/${restaurantId}/menu`).then((res)=>
     res.json()
-
     )
-
     setMenus(restaurantMenu) }
-    menu()
-    
+    menu() 
   }, [restaurantId]);
     
   
