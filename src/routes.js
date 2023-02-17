@@ -9,16 +9,20 @@ const bcrypt = require('bcryptjs');
 //const { v4: uuidv4 } = require('uuid');
 
 
+const PORT = process.env.PORT || 5000;
 
-//src kansiosta node routes.js lähtee käyntiin http://localhost:5000/restaurant näkee hard koodatut ravintolat
+//src kansiosta node routes.js lähtee käyntiin https://foodback.netlify.app/restaurant näkee hard koodatut ravintolat
 
 const dbConn = mysql.createPool({
-  host:'localhost',
+  host:'eu-mm-auto-dub-03-b.cleardb.net',
 	user:'bba4956b68b3c7',
 	password:'9e1c8e32',
 	database:'heroku_135dc8cd87aaef0',
   acquireTimeout: 1000,
-  connectionLimit: 100
+  connectionLimit: 100,
+  ssl: {
+    rejectUnauthorized: true,
+  },
 });
 
 
@@ -264,7 +268,7 @@ app.post("/order/:idUser", function(req, res) {
   });   
 });
 
-// 5000 the port that we are listening
- app.listen(5000, () => {
-     console.log('check http://localhost:5000/register to see the data.');
-});
+// prints to console the port that we are listening
+app.listen(PORT, () => 
+    console.log(`Server is listening on port ${PORT}...`)
+);

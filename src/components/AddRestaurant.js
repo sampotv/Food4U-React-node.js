@@ -24,7 +24,7 @@ if(userJwt != null) {
 
     console.log(userJwt);
  try {        
-    let res = await fetch(`http://localhost:5000/addrestaurant` , {
+    let res = await fetch(`https://foodback.netlify.app/addrestaurant` , {
     method: 'POST',
     headers: {"Content-Type": "application/json",
     'Authorization': 'Bearer ' + props.userJwt

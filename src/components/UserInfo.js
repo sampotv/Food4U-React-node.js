@@ -16,7 +16,7 @@ export default function UserInfo(props) {
 
   useEffect( () => {
     async function useri() {
-    const user = await fetch(`http://localhost:5000/userinfo/${decoded.idUser}`)
+    const user = await fetch(`https://foodback.netlify.app/userinfo/${decoded.idUser}`)
     .then((res) =>
       res.json()
     )
@@ -27,7 +27,7 @@ export default function UserInfo(props) {
 
   useEffect( () => {
     async function order() {
-    const orders = await fetch(`http://localhost:5000/orders/${decoded.idUser}`).then((res) =>
+    const orders = await fetch(`https://foodback.netlify.app/orders/${decoded.idUser}`).then((res) =>
       res.json()
     )
     setHistory(orders) }

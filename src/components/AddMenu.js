@@ -18,7 +18,7 @@ function AddMenu() {
     e.preventDefault();
     var setDish="Alkuruoka";
     try {
-      let res = await fetch(`http://localhost:5000/menuitem/${restaurantId}`, {
+      let res = await fetch(`https://foodback.netlify.app/menuitem/${restaurantId}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -54,7 +54,7 @@ function AddMenu() {
 
   useEffect( () => {
     async function rest() {
-    const restaurant = await fetch(`http://localhost:5000/restaurant/${restaurantId}/restaurant`).then((res) =>
+    const restaurant = await fetch(`https://foodback.netlify.app/restaurant/${restaurantId}/restaurant`).then((res) =>
       res.json()
     )
     setRestaurants(restaurant) }
@@ -64,7 +64,7 @@ function AddMenu() {
 
   useEffect( () => {
     async function menu() {
-    const restaurantMenu = await fetch(`http://localhost:5000/restaurant/${restaurantId}/menu`)
+    const restaurantMenu = await fetch(`https://foodback.netlify.app/restaurant/${restaurantId}/menu`)
     .then((res)=>
     res.json()
     )

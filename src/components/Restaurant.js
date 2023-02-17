@@ -9,7 +9,7 @@ export default function Restaurants(props) {
 
 
     useEffect(async () => {
-        const onerestaurant = await fetch('http://localhost:5000/restaurant').then((res) =>
+        const onerestaurant = await fetch('https://foodback.netlify.app/restaurant').then((res) =>
             res.json()
         )
 

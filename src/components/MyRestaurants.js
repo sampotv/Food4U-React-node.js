@@ -13,7 +13,7 @@ export default function MyRestaurants(props) {
 
   useEffect( () => {
     async function rest() {
-    const allrestaurants = await  fetch(`http://localhost:5000/myrestaurants/${decoded.idUser}`)
+    const allrestaurants = await  fetch(`https://foodback.netlify.app/myrestaurants/${decoded.idUser}`)
     .then((res) =>
       res.json()
     )

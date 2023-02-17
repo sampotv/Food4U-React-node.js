@@ -9,7 +9,7 @@ const [RMenu, setMenu] =useState([]);
 
 
   useEffect(async() => {
-    const RMenu = await fetch('http://localhost:5000/menuitem').then((res)=>
+    const RMenu = await fetch('https://foodback.netlify.app/menuitem').then((res)=>
     res.json()
     )
     

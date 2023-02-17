@@ -10,7 +10,7 @@ export default function Restaurantss() {
   
   useEffect( () => {
     async function rest() {
-    const allrestaurants = await fetch('http://localhost:5000/restaurant')
+    const allrestaurants = await fetch('https://foodback.netlify.app/restaurant')
     .then((res) =>
       res.json()
     )
@@ -19,7 +19,7 @@ export default function Restaurantss() {
   }, []);
 
   // useEffect(async(idRestaurant) => {
-  //   const oneMenu = await fetch(`http://localhost:5000/menuitem/${idRestaurant}`).then((res)=>
+  //   const oneMenu = await fetch(`https://foodback.netlify.app/menuitem/${idRestaurant}`).then((res)=>
   //   res.json()
   //   )
 

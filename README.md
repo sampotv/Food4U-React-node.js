@@ -32,7 +32,7 @@ Halutessasi voit kloonata repositorion omalle koneelle Gitillä.  Käyttäen Git
 •	Avaa Visual Studio Code:ssa kaksi terminaalia. Backendille ja frontendille oma terminaali.
 •	Backend täytyy käynnistää ensin.
 •	Backendin käynnistys seuraavilla skripteillä: cd backend, cd src, npm install (tarpeellinen vain sovelluksen ensimmäisellä käynnistyskerralla), node routes.js.
-  Jos backend käynnistyi oikein Visual Studio Code:n terminaaliin tulee viesti: check http://localhost:5000/register to see the data. 
+  Jos backend käynnistyi oikein Visual Studio Code:n terminaaliin tulee viesti: check https://foodback.netlify.app/register to see the data. 
 
 •	Seuraavaksi käynnistetään frontend.
 •	Siirry frontendin terminaaliin a syötä seuraavat skriptit: cd frontend, cd src npm install (tarpeellinen vain sovelluksen ensimmäisellä käynnistyskerralla), npm      start.

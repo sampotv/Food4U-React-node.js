@@ -25,7 +25,7 @@ export default function GetMenu (props) {
 
     useEffect( () => {
       async function rest() {
-      const restaurant = await fetch(`http://localhost:5000/restaurant/${restaurantId}/restaurant`)
+      const restaurant = await fetch(`https://foodback.netlify.app/restaurant/${restaurantId}/restaurant`)
       .then((res) =>
         res.json()
       )
@@ -38,7 +38,7 @@ export default function GetMenu (props) {
 
 
     const addOrder = () => {
-     Axios.post(`http://localhost:5000/order/:idUser`, {
+     Axios.post(`https://foodback.netlify.app/order/:idUser`, {
          amount: cartItems.length,        
          price: totalPrice,
          address: address,
@@ -54,7 +54,7 @@ export default function GetMenu (props) {
  
   useEffect(() => {
     async function menu() {
-    const restaurantMenu = await fetch(`http://localhost:5000/restaurant/${restaurantId}/menu`).then((res)=>
+    const restaurantMenu = await fetch(`https://foodback.netlify.app/restaurant/${restaurantId}/menu`).then((res)=>
     res.json()
     )
     setMenus(restaurantMenu) }

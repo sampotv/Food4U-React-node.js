@@ -18,7 +18,7 @@ let addSubmit = async (e) => {
     e.preventDefault();
     
  try {        
-    let res = await fetch(`http://localhost:5000/user` , {
+    let res = await fetch(`https://foodback.netlify.app/user` , {
     method: 'POST',
     headers: {"Content-Type": "application/json",
   },

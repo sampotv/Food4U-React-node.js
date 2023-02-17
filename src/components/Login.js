@@ -14,7 +14,7 @@ export default function Login(props) {
       event.preventDefault();
       setLoginProcessState("processing");
       try {
-        const response = await fetch(`http://localhost:5000/login` , {
+        const response = await fetch(`https://foodback.netlify.app/login` , {
                method: 'POST',
                headers: {"Content-Type": "application/json",
          },
