@@ -10,7 +10,7 @@ export default function Restaurantss() {
   
   useEffect( () => {
     async function rest() {
-    const allrestaurants = await fetch('https://foodback.netlify.app/restaurant')
+    const allrestaurants = await fetch('https://food4uapp.herokuapp.com/restaurant')
     .then((res) =>
       res.json()
     )
@@ -19,7 +19,7 @@ export default function Restaurantss() {
   }, []);
 
   // useEffect(async(idRestaurant) => {
-  //   const oneMenu = await fetch(`https://foodback.netlify.app/menuitem/${idRestaurant}`).then((res)=>
+  //   const oneMenu = await fetch(`https://food4uapp.herokuapp.com/menuitem/${idRestaurant}`).then((res)=>
   //   res.json()
   //   )
 

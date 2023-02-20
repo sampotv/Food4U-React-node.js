@@ -11,13 +11,20 @@ const bcrypt = require('bcryptjs');
 
 const PORT = process.env.PORT || 5000;
 
-//src kansiosta node routes.js lähtee käyntiin https://foodback.netlify.app/restaurant näkee hard koodatut ravintolat
+//src kansiosta node routes.js lähtee käyntiin https://food4uapp.herokuapp.com/restaurant näkee hard koodatut ravintolat
+/*
+host:'eu-mm-auto-dub-03-b.cleardb.net',
+user:'bba4956b68b3c7',
+password:'9e1c8e32',
+database:'heroku_135dc8cd87aaef0',
+*/
+
 
 const dbConn = mysql.createPool({
-  host:'eu-mm-auto-dub-03-b.cleardb.net',
-	user:'bba4956b68b3c7',
-	password:'9e1c8e32',
-	database:'heroku_135dc8cd87aaef0',
+  host:'sql7.freesqldatabase.com',
+	user:'sql7599044',
+	password:'hn5kX7AK2d',
+	database:'sql7599044',
   acquireTimeout: 1000,
   connectionLimit: 100,
   ssl: {

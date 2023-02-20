@@ -9,7 +9,7 @@ const [RMenu, setMenu] =useState([]);
 
 
   useEffect(async() => {
-    const RMenu = await fetch('https://foodback.netlify.app/menuitem').then((res)=>
+    const RMenu = await fetch('https://food4uapp.herokuapp.com/menuitem').then((res)=>
     res.json()
     )
     

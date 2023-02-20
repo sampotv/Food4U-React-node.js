@@ -13,7 +13,7 @@ export default function MyRestaurants(props) {
 
   useEffect( () => {
     async function rest() {
-    const allrestaurants = await  fetch(`https://foodback.netlify.app/myrestaurants/${decoded.idUser}`)
+    const allrestaurants = await  fetch(`https://food4uapp.herokuapp.com/myrestaurants/${decoded.idUser}`)
     .then((res) =>
       res.json()
     )
