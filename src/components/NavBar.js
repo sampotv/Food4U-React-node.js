@@ -12,9 +12,9 @@ export default function NavBar() {
         <div className='barElements'>
             <Link to ="/"><img src={siteLogo} width="293" height="100" alt="Food 4 U"/></Link>
                 <div className='barButtons'>
-                    <Link className="button" to="/UserInfo/:idUser" title='Käyttäjätiedot'><i class="fas fa-info-circle" /></Link>
-                    <Link className="button"to ="/Login" title="Kirjaudu"><i class="fas fa-sign-in-alt" /></Link>
-                    <Link className="button" to ="/Register" title="Luo itsellesi tunnus"><i class="fas fa-user-plus" /></Link>
+                <Link className="button" to="/UserInfo/:idUser" title='Käyttäjätiedot'>USERINFO</Link>
+                    <Link className="button"to ="/Login" title="Kirjaudu">LOGIN</Link>
+                    <Link className="button" to ="/Register" title="Luo itsellesi tunnus">REGISTER</Link>
                      
                 </div>
          </div>   
