@@ -38,7 +38,7 @@ export default function GetMenu (props) {
 
 
     const addOrder = () => {
-     Axios.post(`https://food4uapp.herokuapp.com/order/:idUser`, {
+     axios.post(`https://food4uapp.herokuapp.com/order/:idUser`, {
          amount: cartItems.length,        
          price: totalPrice,
          address: address,
